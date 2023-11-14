@@ -4,17 +4,17 @@ For a server which is doing SSL offloading the most important metrics to monitor
 
 ## Operating system:
 
-CPU 
-Connection count (open connection)
-Bandwidth usage
-Memory
-Number of processes
+- CPU 
+- Connection count (open connection)
+- Bandwidth usage
+- Memory
+- Number of processes
 
 ## Proxy server:
 
-Inbound traffic
-Outbound traffic
-RTT (round-trip time) 
+- Inbound traffic
+- Outbound traffic
+- RTT (round-trip time) 
 
 ### CPU
 
