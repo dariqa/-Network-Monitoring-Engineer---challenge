@@ -12,7 +12,17 @@ Script is cryptographically secure (uses the unix entropy pool data for creation
 
 Put this script into /usr/bin or your home directory, ensure you have *execute* permission and run:
 ```
-[root@hostname /]# ./script.sh
+[user@hostname:~$ ./script.sh
+6
+4
+5
+2
+8
+1
+9
+10
+3
+7
 ```
 
 ## Usage

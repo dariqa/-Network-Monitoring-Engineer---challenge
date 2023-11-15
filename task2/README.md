@@ -5,7 +5,7 @@ For a server which is doing SSL offloading the most important metrics to monitor
 ## Operating system:
 
 - CPU 
-- Connection count (open connection)
+- Connection count (open connections)
 - Bandwidth usage
 - Memory
 - Number of processes
@@ -18,7 +18,7 @@ For a server which is doing SSL offloading the most important metrics to monitor
 
 ### CPU
 
-- SSL Offloading is cpu sensitive process.
+- SSL Offloading is a cpu sensitive process.
 - User - ssh connections, databases (anything not a part of OS or hardware) - shows the useful CPU usage
 - System - kernel (network packets are inspected by the kernel - firewall works on the kernel)
 - IO - CPU priority by default
@@ -46,7 +46,7 @@ The balance between inbound and outbound connections should be monitored and mai
 
 ### RTT
 
-Latency monitoring. Could indicate slowness in the whole chain from request to reply (ex. overload of this server or overload on backen or db server, slow network).
+Latency monitoring. Could indicate slowness in the whole chain from request to reply (e.g overload of this server or overload on backend or db server, slow network).
 
 
 ## How to monitor the metrics:
@@ -58,15 +58,15 @@ IO monitoring
 ### Mpstat
 CPU monitoring
 
-Each of these tools is able to monitor only one aspect of our system. The challenge is to combine them, to present stats in human readable form and to archive them (they show only "right-now" result) - the problem is to store them and agregate them in order to present the general view of the server performance
+Each of these tools is able to monitor only one aspect of our system. The challenge is to combine them, to present stats in human readable form and to archive them (they show only "right-now" result) - the problem is to store them and agregate them in order to present the general overview of the server performance
 
 ### NMON:
 
-Combines stats, but is not showing the trend, requires additional visualisation tool
+Combines stats, but it's not showing the trend, requires additional visualisation tool
 
 ### NAGIOS/CENTREON/ZABBIX:
 
-They are complex tools with build-in visualisation. Can monitor system stats and application stats at the same time and present them in different ways that could help to understand problems (different dashboards, graphs...) that can show show different aspects of one KPI. They are complex, require their own infrastructure (server-client applications) and must be configured for specific task. 
+They are complex tools with build-in visualisation. They can monitor system stats and application stats at the same time and present them in different ways that could help to understand problems (different dashboards, graphs...) that can show different aspects of one KPI. They are complex, require their own infrastructure (server-client applications) and must be configured for specific task. 
 
 ### Datadog/Dynatrace
 
@@ -74,4 +74,4 @@ They are able to collect all stats and display them in graphical way, but they a
 
 ### Elastic Search Stack/Prometeus,Grafana etc...
 
-Very powerful tools for data analysis, can leverage machine learning and AI. require a lot of processing power, configuration and integration (plugins, agents that you have to unlike in case of above configure to show you what you want to see, otherwise they just grab data but don't present it in a meaningful way).
+Very powerful tools for data analysis, can leverage machine learning and AI. They r,equire a lot of processing power, configuration and integration (plugins, agents that you have to unlike in case of above, configure to show you what you want to see, otherwise they just grab data but don't present it in a meaningful way). 
